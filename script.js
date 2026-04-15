@@ -4,6 +4,13 @@ function joinServer(){
   window.location.href = invite;
 }
 
+// Learn more knop (FIX)
+function scrollToFeatures(){
+  document.getElementById('features').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
 // PARTICLES
 const canvas = document.getElementById('bg');
 const ctx = canvas.getContext('2d');
@@ -43,7 +50,7 @@ fetch('https://discord.com/api/v9/invites/bxTzzrnU2z?with_counts=true')
   const countEl = document.getElementById('memberCount');
   const statEl = document.getElementById('members');
 
-  countEl.innerText = `👥 ${data.approximate_member_count} members`;
+  countEl.innerText = `👥 ${data.approximate_member_count} leden`;
 
   let count = 0;
   let target = data.approximate_member_count;
